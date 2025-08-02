@@ -1,0 +1,49 @@
+### with tailwindcss version above 4
+
+
+// this version is somehow making dom reload
+package.json
+{
+
+"autoprefixer": "^10.4.21",
+"postcss": "^8.5.6",
+"tailwindcss": "^4.1.11",
+}
+
+// postcss.config.js
+export default {
+    plugins: {
+        "@tailwindcss/postcss": {},
+    }
+}
+
+//main.css
+@import "tailwindcss";
+
+
+### with tailwindcss version below 3.4.4
+
+// package.json
+{
+"autoprefixer": "^10.4.19",
+"postcss": "^8.4.38",
+"tailwindcss": "^3.4.4",
+}
+
+// postcss.config.js
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+
+
+//main.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
